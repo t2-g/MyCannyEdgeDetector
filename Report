@@ -1,0 +1,21 @@
+Task: Write your own Canny edge detector 
+
+How did you decide the Low and high thresholds for hysteresis? 
+
+Playing around with the constant global low and high thresholds , I realized we needed some logic to back up my choice of thresholds as global threshold choice gave good results with some but were not good with others. 
+Therefore, in the thresholding step of my code I slowly started increasing the value of my low threshold value from 0 and decreasing my high threshold value from 255 to an appropriate tradeoff based on the SSIM ratio . If the value of the ratio was greater than the present then i update the values of the threshold. 
+
+What were your observations?
+We observed the following indices which quantize the similarity between our myCannyEdgeDetector()and the standard canny(inputImage,3)functions:)
+Changing the thresholds led to variation in the degree of edges that were considered in my filter, as I increased the value of the low threshold the fine edges diminished whereas the PSNR value increased as we increased the high threshold.
+
+
+
+
+
+
+
+
+
+
+
